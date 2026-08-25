@@ -85,3 +85,6 @@ export class CommunityRegistry {
     if (!ID_RE.test(value)) throw new Error(`invalid ${label}`);
   }
 }
+
+export { ChannelRegistry } from "./channels.js";
+export type { ChannelSnapshot, ChannelVisibility } from "./channels.js";
