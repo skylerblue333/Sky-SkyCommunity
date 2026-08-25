@@ -1,44 +1,34 @@
-<!-- PORTFOLIO PROJECT PROFILE: maintained by the repository owner -->
+# SkyCommunity Core
 
-## Project profile and code-audit snapshot
+**Status: engineering beta / reusable domain core.** This repository provides deterministic community ownership and membership rules for SKYCOIN4444 components.
 
-**What this is:** **Sky-SkyCommunity** is a public repository described as: “Repository for the SkyCommunity component of the Sky ecosystem.” Its dominant language signals are **No dominant programming-language extension was detected in the sampled repository tree.**.
+## Supported today
 
-**Why it has value:** Its value is best understood through the implementation evidence currently present in the repository: **6 tracked files** were observed in the shallow audit, with the source structure and existing documentation providing the project’s specific context. This README does not treat a prototype, experiment, or archive as a production system without supporting evidence.
+- bounded community creation;
+- automatic owner membership;
+- idempotent member joins;
+- member leave operations;
+- owner-orphan protection;
+- explicit ownership transfer to an existing member;
+- deterministic member snapshots;
+- strict TypeScript build and tests.
 
-**Implementation evidence:** No test-related file was detected by filename heuristics.; No dependency manifest was detected.; No CI, build, Docker, or infrastructure signal was detected by the audit.; and 4 documentation or governance file(s) detected. Test filenames observed include none detected. Dependency or package files include none detected. Build, CI, or infrastructure signals include none detected.
+## Not claimed
 
-**Current status:** The repository is tracked on the `main` branch. The existing source tree, configuration, tests, workflows, and documentation remain authoritative for supported behavior and maturity. A code audit is not a production-readiness certification, and the presence of a test or workflow file does not establish that all checks pass.
+This is not a deployed social network, database service, moderation platform, identity provider, messaging system, payments product, recommendation engine, or production community backend. State is process-local. Production use requires durable storage, authentication/RBAC, moderation/audit controls, privacy controls, rate limiting, observability, backups, and deployment evidence.
 
-**Relationship to the wider portfolio:** This repository is one focused component of the broader Skyler Blue Spillers portfolio across AI, software engineering, cloud and DevOps, cybersecurity, blockchain, finance, education, social systems, and creative work. It may provide a service boundary, implementation pattern, experiment, archive, or reusable idea for related repositories. Treat repositories as technical dependencies only where documented interfaces and verified project requirements support that relationship.
+## Development
 
-**Quality and security note:** No obvious secret-like pattern was detected by the limited static scan; this is not a substitute for a security audit. No TODO/FIXME marker was detected in the scanned text files.
+```bash
+npm install
+npm run check
+npm test
+```
 
----
+## SKYCOIN4444 integration
 
-# Sky Skycommunity
+The core is intended to complement the flagship community API rather than replace its persistence layer. Consumers can reuse these ownership/membership invariants behind a durable adapter.
 
-![GitHub stars](https://img.shields.io/github/stars/skylerblue333/Sky-SkyCommunity?style=flat-square)
-![GitHub license](https://img.shields.io/github/license/skylerblue333/Sky-SkyCommunity?style=flat-square)
+## License
 
-## 🌟 Overview
-**Sky-SkyCommunity** is a professional-grade project within the **SkyCoin4444** ecosystem. It focuses on delivering high-value solutions in the domain of **Software Development**.
-
-## 🚀 Key Features
-- **Scalable Architecture**: Designed for enterprise-level growth and performance.
-- **Modern Standards**: Implements best practices for clean code and maintainability.
-- **Robust Integration**: Built to work seamlessly within modern cloud-native environments.
-
-## 🛠️ Technology Stack
-- **Primary Domain**: Software Development
-- **Ecosystem**: SkyCoin4444 Digital Platform
-
-## 📂 Structure
-The project is organized into a modular structure to ensure clarity and ease of development.
-
-## 👨‍💻 Author
-**Skyler Blue Spillers**
-*Professional Chess Player & Software Engineer*
-
----
-*Powered by SkyCoin4444*
+See `LICENSE`.
